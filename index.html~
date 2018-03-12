@@ -19,15 +19,6 @@
     <div id="aminoacids-container" style="display:none">
 
         <div id="aminoacids" style="display:none;">
-        
-        <!--   Attribution
-        The SVG of the amino acid structures was obtained from the following file: https://commons.wikimedia.org/wiki/File:Amino_Acids.svg
-        Author: Dancojocari (https://commons.wikimedia.org/wiki/User:Dancojocari)
-        License: This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license.
-        Modifications: groups defining amino acid structures were extracted and given more meaningful id attributes to facilitate lookup using DOM selectors
-        
-        
-        -->
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                  viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
 
