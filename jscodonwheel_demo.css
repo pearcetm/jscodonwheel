@@ -1,0 +1,19 @@
+/********** Footer style **************************/
+.footer {
+	background-color:rgb(240,250,250);
+    padding: 10px 20px;
+    font-size: 12px;
+    margin-top:2em;
+}
+.footer-section-title {
+	font-weight: bold;
+}
+
+.footer-section-text {
+	font-weight: normal;
+}
+
+.disclaimer-text {
+	font-weight: normal;
+    font-style: italic;
+}
