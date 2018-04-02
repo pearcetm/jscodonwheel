@@ -1,37 +1,34 @@
-## Welcome to GitHub Pages
+## jsCodonWheel
 
-You can use the [editor on GitHub](https://github.com/pearcetm/jscodonwheel/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This widget is an interactive version of the widely-used circular chart that translates DNA codons into the resulting amino acids. It displays the path from the center of the wheel (reflecting the first nucleotide of the codon) to the periphery (the third nucleotide) and the resulting amino acid(s). Two paths can be shown at once, to compare the effects of a point mutation/single nucleotide variant. Detailed information about each amino acid is presented below the text input fields, allowing side-by-side comparison of wild-type and variant amino acids.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Using the widget
+The codon wheel can be used in two main modes: text input and click/touch. Using the text inputs, enter three letters representing the codon itself (A, T, C, G), the single- or three-letter code for an amino acid, or the full name of the amino acid. The widget is not case sensitive, so either upper or lower case input is acceptable. You can also select an amino acid by clicking or touching the outer rings of the wheel. 
 
-### Markdown
+[Try it out on the demo page!](https://pearcetm.github.io/jscodonwheel)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Embedding the widget
+jsCodonWheel can be embedded in a webpage by including the jscodonwheel.js JavaScript file. In addition, svg elements representing the amino acid structures should be included in the html of the page. The individual structures are referenced using an `href:xlink` to the id attribute, which is expected to be in the form `#aa-X` where `X` is the lower-case character of the single-letter amino acid code.
 
-```markdown
-Syntax highlighted code block
+Including the script exposes a function `Codonwheel()` which creates the JavaScript widget. The widget's API consists of a single function, `init(options)`. This function configures the widget and draws the graphical elements into the HTML document.
 
-# Header 1
-## Header 2
-### Header 3
+### Configuration options:
 
-- Bulleted
-- List
+#### target: selector string
+The target option defines where to create the widget. If a target is not provided, a `<div>` with class `codonwheel` is created and appended to the body of the document, and used to contain the widget.
 
-1. Numbered
-2. List
+#### colors: object
+The colors option allows overriding the default colors of the background widget, wildtype and variant amino acids.
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+#### Default options
+Default options are defined below.
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pearcetm/jscodonwheel/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+default_options={
+    target: '',
+    colors: {
+        background:'white',
+        wildtype: 'rgb(210,255,200)',
+        mutant: 'rgb(255,200,210)',
+    },
+}
+```
