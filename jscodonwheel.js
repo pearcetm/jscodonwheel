@@ -61,6 +61,7 @@ function Codonwheel() {
                 wildtype: 'rgb(210,255,200)',
                 mutant: 'rgb(255,200,210)',
             },
+            biophysical_data:aa_display_info,
         };
         options = $.extend(true, {}, default_options, options);
 
