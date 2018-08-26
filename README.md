@@ -20,6 +20,14 @@ The target option defines where to create the widget. If a target is not provide
 #### colors: object
 The colors option allows overriding the default colors of the background widget, wildtype and variant amino acids.
 
+#### biophysical_data: object
+The keys of this object are the one-letter amino acid codes, and the corresponding values are arrays which define the biophysical properties to be displayed. For example:
+
+    {
+        H: [{'Side chain':'Imidazole'}, {'Charge':'Positive'}, {'Hydropathy':'Moderate'}],
+        ...
+    }
+
 #### Default options
 Default options are defined below.
 ```
@@ -30,5 +38,6 @@ default_options={
         wildtype: 'rgb(210,255,200)',
         mutant: 'rgb(255,200,210)',
     },
+    biophysical_data:{...},//see source code
 }
 ```
